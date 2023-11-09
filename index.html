@@ -13,6 +13,32 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+    
+    <!-- CSS for the pop-up -->
+    <style>
+        .popup-background {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -58,28 +84,19 @@
     <script>
         // Function to show the pop-up with a delay
         function showPopup() {
-            // Create a new div element for the pop-up
+            // Create a background overlay
+            var popupBackground = document.createElement("div");
+            popupBackground.className = "popup-background";
+            document.body.appendChild(popupBackground);
+
+            // Create the pop-up div
             var popupDiv = document.createElement("div");
             popupDiv.className = "popup";
-
-            // Add content to the pop-up
             popupDiv.innerHTML = `
-                <p>Croissance & développement</p>
-                <p>Clique <a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">ICI</a> !</p>
+                <p>Croissance et développement</p>
+                <p><a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">Clique pour entrer</a></p>
             `;
-
-            // Append the pop-up to the body of the page
             document.body.appendChild(popupDiv);
-
-            // Style the pop-up as desired
-            popupDiv.style.position = "fixed";
-            popupDiv.style.top = "50%";
-            popupDiv.style.left = "50%";
-            popupDiv.style.transform = "translate(-50%, -50%)";
-            popupDiv.style.background = "#fff";
-            popupDiv.style.padding = "20px";
-            popupDiv.style.border = "1px solid #ccc";
-            popupDiv.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.2)";
         }
 
         // Call the showPopup function with a delay (e.g., 4 seconds)
