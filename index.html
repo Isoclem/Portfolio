@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <!--
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Multiverse by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 <head>
@@ -13,13 +13,33 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+
+    <!-- JavaScript for the pop-up -->
+    <script>
+        // Function to show the pop-up
+        function showPopup() {
+            // Create a new div element for the pop-up
+            var popupDiv = document.createElement("div");
+            popupDiv.className = "popup";
+
+            // Add content to the pop-up
+            popupDiv.innerHTML = `
+                <p>Welcome to our website!</p>
+                <p>Click <a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">here</a> to visit our forum page.</p>
+            `;
+
+            // Append the pop-up to the body of the page
+            document.body.appendChild(popupDiv);
+        }
+
+        // Call the showPopup function when the page loads
+        window.addEventListener("load", showPopup);
+    </script>
 </head>
 
 <body class="is-preload">
-
     <!-- Wrapper -->
     <div id="wrapper">
-
         <!-- Header -->
         <header id="header">
             <h1><a href="index.html"><strong>Portfolio</strong></a></h1>
@@ -32,63 +52,7 @@
 
         <!-- Main -->
         <div id="main">
-            <article class="thumb">
-                <a href="images/fulls/01.png" class="image"><img src="images/thumbs/01.png" alt="" /></a>
-                <h2>Coucher de Soleil</h2>
-                <p>Réalisée en 10h environ. Vue de la ville par la fenêtre pendant un coucher de soleil.</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/02.png" class="image"><img src="images/thumbs/02.png" alt="" /></a>
-                <h2>Kagoshima</h2>
-                <p>Représente le volcan de Kagoshima (Japon) en éruption</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/03.png" class="image"><img src="images/thumbs/03.png" alt="" /></a>
-                <h2>Ruelle violette</h2>
-                <p>Ruelle en début de soirée.</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/04.png" class="image"><img src="images/thumbs/04.png" alt="" /></a>
-                <h2>A la ferme</h2>
-                <p>On peut voir une grange. Voilà.</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/05.png" class="image"><img src="images/thumbs/05.png" alt="" /></a>
-                <h2>Patrouille de France</h2>
-                <p>Représentation de la patrouille de france</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/06.png" class="image"><img src="images/thumbs/06.png" alt="" /></a>
-                <h2>Appartement</h2>
-                <p>L'objectif était de jouer avec les couleurs et essayer d'instaurer une ambiance laminaire</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/07.png" class="image"><img src="images/thumbs/07.png" alt="" /></a>
-                <h2>Vers le ciel</h2>
-                <p>Lever la tête dans une ville.</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/08.png" class="image"><img src="images/thumbs/08.png" alt="" /></a>
-                <h2>Nuage</h2>
-                <p>Essaie de représentation d'un nuage</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/09.png" class="image"><img src="images/thumbs/09.png" alt="" /></a>
-                <h2>Vortex</h2>
-                <p>Jeu de couleurs.</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/10.png" class="image"><img src="images/thumbs/10.png" alt="" /></a>
-                <h2>Reflet dans l'eau</h2>
-                <p>Reflet d'un village dans l'eau.</p>
-            </article>
-            <article class="thumb">
-                <a href="images/fulls/11.png" class="image"><img src="images/thumbs/11.png" alt="" /></a>
-                <h2>Avant la nuit.</h2>
-                <p>Illustration non terminé.</p>
-            </article>
-            <article class="thumb">
-            </article>
+            <!-- Your content here -->
         </div>
 
         <!-- Footer -->
@@ -102,7 +66,6 @@
                 </div>
             </div>
         </footer>
-
     </div>
 
     <!-- Scripts -->
@@ -112,8 +75,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
-
-
 </html>
