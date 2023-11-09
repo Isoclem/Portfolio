@@ -14,9 +14,24 @@
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
 
+    <style>
+        /* CSS for the pop-up with initial hidden state */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
     <!-- JavaScript for the pop-up -->
     <script>
-        // Function to show the pop-up
+        // Function to show the pop-up with a fade-in effect
         function showPopup() {
             // Create a new div element for the pop-up
             var popupDiv = document.createElement("div");
@@ -24,16 +39,22 @@
 
             // Add content to the pop-up
             popupDiv.innerHTML = `
-                <p>Croissance et développement accès</p>
-                <p>Click <a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">here</a> to visit our forum page.</p>
+                <center><p>Croissance et développement</p>
+                <p>Clique sur le<a hre"hf=ttps://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">lien</a> ! </p></center>
             `;
 
             // Append the pop-up to the body of the page
             document.body.appendChild(popupDiv);
+
+            // Fade-in the pop-up with a 1-second animation
+            setTimeout(function() {
+                popupDiv.style.transition = "opacity 1s";
+                popupDiv.style.opacity = 1;
+            }, 100);
         }
 
-        // Call the showPopup function when the page loads
-        window.addEventListener("load", showPopup);
+        // Call the showPopup function after 4 seconds (4000 milliseconds)
+        setTimeout(showPopup, 4000);
     </script>
 </head>
 
