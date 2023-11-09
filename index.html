@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
     
-    <!-- CSS for the pop-up -->
+    <!-- CSS for the pop-up and background overlay -->
     <style>
         .popup-background {
             display: none;
@@ -23,8 +23,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             z-index: 999;
+            opacity: 0;
+            transition: opacity 1s;
         }
 
         .popup {
@@ -55,7 +57,7 @@
         </header>
 
         <!-- Main -->
-    <div id="main">
+               <div id="main">
             <article class="thumb">
                 <a href="images/fulls/01.png" class="image"><img src="images/thumbs/01.png" alt="" /></a>
                 <h2>Coucher de Soleil</h2>
@@ -153,25 +155,31 @@
 
     <!-- JavaScript for the pop-up -->
     <script>
-        // Function to show the pop-up with a delay
+        // Function to show the pop-up with a delay and fade-in effect
         function showPopup() {
             // Create a background overlay
             var popupBackground = document.createElement("div");
             popupBackground.className = "popup-background";
             document.body.appendChild(popupBackground);
-
+            
             // Create the pop-up div
             var popupDiv = document.createElement("div");
             popupDiv.className = "popup";
             popupDiv.innerHTML = `
                 <p>Croissance et développement</p>
-                <p><a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">Clique pour entrer</a></p>
+                <p><a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">Clique ici pour rejoindre le cours</a></p>
             `;
             document.body.appendChild(popupDiv);
+            
+            // Delay for 100ms to allow styles to be applied
+            setTimeout(function () {
+                popupBackground.style.opacity = 1;
+            }, 100);
         }
 
         // Call the showPopup function with a delay (e.g., 4 seconds)
-        setTimeout(showPopup, 4000);
+        setTimeout(showPopup, 3000);
     </script>
 </body>
 </html>
+
