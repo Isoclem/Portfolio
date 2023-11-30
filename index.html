@@ -1,8 +1,10 @@
+
+
 <!DOCTYPE HTML>
 <!--
-    Multiverse by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 <head>
@@ -13,39 +15,13 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
-    
-    <!-- CSS for the pop-up and background overlay -->
-    <style>
-        .popup-background {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-    </style>
 </head>
 
 <body class="is-preload">
+
     <!-- Wrapper -->
     <div id="wrapper">
+
         <!-- Header -->
         <header id="header">
             <h1><a href="index.html"><strong>Portfolio</strong></a></h1>
@@ -57,7 +33,7 @@
         </header>
 
         <!-- Main -->
-               <div id="main">
+        <div id="main">
             <article class="thumb">
                 <a href="images/fulls/01.png" class="image"><img src="images/thumbs/01.png" alt="" /></a>
                 <h2>Coucher de Soleil</h2>
@@ -130,20 +106,6 @@
         </footer>
 
     </div>
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer" class="panel">
-            <div class="inner split">
-                <div>
-                    <section>
-                        <h2>Intérêt du site</h2>
-                        <p>Ce site me permet de tester quelques lignes de code ainsi que d'exposer des peintures réalisées sous Photoshop</p>
-                    </section>
-                </div>
-            </div>
-        </footer>
-    </div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -153,33 +115,11 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- JavaScript for the pop-up -->
-    <script>
-        // Function to show the pop-up with a delay and fade-in effect
-        function showPopup() {
-            // Create a background overlay
-            var popupBackground = document.createElement("div");
-            popupBackground.className = "popup-background";
-            document.body.appendChild(popupBackground);
-            
-            // Create the pop-up div
-            var popupDiv = document.createElement("div");
-            popupDiv.className = "popup";
-            popupDiv.innerHTML = `
-                <p>Croissance et développement</p>
-                <p><a href="https://madoshinochiheisen.forumsrpg.com/h10-croissance-et-dev">Clique ici pour rejoindre le cours</a></p>
-            `;
-            document.body.appendChild(popupDiv);
-            
-            // Delay for 100ms to allow styles to be applied
-            setTimeout(function () {
-                popupBackground.style.opacity = 1;
-            }, 100);
-        }
-
-        // Call the showPopup function with a delay (e.g., 4 seconds)
-        setTimeout(showPopup, 3000);
-    </script>
 </body>
+
+
+</html>
+
+
 </html>
 
